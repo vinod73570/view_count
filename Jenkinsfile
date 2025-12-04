@@ -19,8 +19,8 @@ pipeline {
       stage("create container using docker-compose up") {
          steps {
             echo " creating containers "
-            sh "docker compose down || true "
-            sh "docker compose up -d "
+            sh "docker-compose down || true "
+            sh "docker-compose up -d "
          }
       }
    }
